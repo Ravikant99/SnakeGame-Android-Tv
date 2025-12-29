@@ -1,0 +1,22 @@
+package com.example.growingsnake
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.tv.material3.ExperimentalTvMaterial3Api
+import com.example.growingsnake.ui.theme.GrowingSnakeTheme
+
+/**
+ * Main Activity for the Snake Game Android TV application.
+ */
+class MainActivity : ComponentActivity() {
+    @OptIn(ExperimentalTvMaterial3Api::class)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            GrowingSnakeTheme {
+                AppNavigation()
+            }
+        }
+    }
+}
